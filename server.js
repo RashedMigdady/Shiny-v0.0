@@ -11,11 +11,14 @@ app.use(cors());
 //     res.sendFile(path.join(__dirname + "/React/build/index.html"));
 // });
 
-//app.use("/delete", require("./server/delete"));
+app.use("/CancelJoining", require("./server/CancelJoining"));
 app.use("/JoinNow", require("./server/JoinNow"));
 //app.use("/search", require("./server/search"));
 //app.use("/report", require("./server/report"));
 
+const test = {major:"CS" , gender:"Male"}
+
+app.get('/', (req, res) => res.json({name:"Rashed",age:23,test}))
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`));

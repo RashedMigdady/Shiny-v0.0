@@ -16,14 +16,21 @@ db.once('open', function () {
 
 let ProfessionSchema = new mongoose.Schema({
   // _id: String,
-  firstName: String,
+  firstName: {type:String,
+              required:true,
+             },
   lastName: String,
-  phone: String,
-  email: String,
-  ProfessionType: String,
-  Address: String,
+  phone: {type:String,
+           required:true},
+  email: {type:String,
+          required:true,
+          unique:true},
+  ProfessionType: {type:String,
+                   required:true},
+  Address: {type:String,
+            required:true},
   yearsOfExperience:String,
-  HourlyPrice:String,
+  HourlyPrice:Number,
   reports:Array,
   
 });

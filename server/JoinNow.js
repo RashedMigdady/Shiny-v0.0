@@ -22,7 +22,7 @@ router.post("/add", (req, res) => {
 
 //other solution
 router.post('/:firstName/:lastName/:phone/:Address/:ProfessionType/:email', (req, res) => {
-    // console.log("Rawabi server")
+    
     let firstName = req.params.firstName;
     let lastName = req.params.lastName;
     let phone = req.params.phone;
