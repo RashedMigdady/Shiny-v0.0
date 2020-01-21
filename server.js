@@ -13,11 +13,19 @@ app.use(cors());
 
 app.use("/CancelJoining", require("./server/CancelJoining"));
 app.use("/JoinNow", require("./server/JoinNow"));
-//app.use("/search", require("./server/search"));
-//app.use("/report", require("./server/report"));
+app.use("/search", require("./server/search"));
+app.use("/report", require("./server/report"));
+
+
+app.get("/workers", (req, res) => {
+    mongo.getWorkers(result => {
+        
+      res.json(result);
+    });
+  });
+
 
 const test = {major:"CS" , gender:"Male"}
-
 app.get('/', (req, res) => res.json({name:"Rashed",age:23,test}))
 
 const PORT = process.env.PORT || 9000;

@@ -1,10 +1,11 @@
-/*const db = require("../database");
-let Profession = db.Profession
+const db = require("../database");
+//let  Donor= db.Donor;
+let Profession = db.Profession;
 
 
 
 let readData = cb => {
- CancelJoining.find({}, (err, data) => {
+  Donor.find({}, (err, data) => {
     if (err) {
       cb(err);
     } else {
@@ -13,9 +14,9 @@ let readData = cb => {
     }
   });
 };
-let updateDonor = (newReport, cb) => {
+let updatePro = (newReport, cb) => {
   // console.log("Dbbbbbbbbbbbbbbb", newReport);
-  Donor.findByIdAndUpdate(newReport._id, newReport, (err, data) => {
+  Profession.findByIdAndUpdate(newReport._id, newReport, (err, data) => {
     if (err) {
       cb(err);
     } else {
@@ -25,8 +26,8 @@ let updateDonor = (newReport, cb) => {
   });
 };
 
-let countDonors = cb => {
-  Donor.count({}, (err, data) => {
+let countPro = cb => {
+  Profession.count({}, (err, data) => {
     if (err) {
       cb(err);
     } else {
@@ -36,7 +37,7 @@ let countDonors = cb => {
   });
 };
 module.exports = {
-  countDonors,
-  updateDonor,
+  countPro,
+  updatePro,
   readData
-};*/
+};

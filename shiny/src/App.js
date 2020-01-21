@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
+import JoinNow from './Component/JoinNow';
 
-function App() {
-  return (
-    <div className="App">
-      
-        
-        
-        
-    </div>
-  );
+class App extends React.Component {
+  
+  render() {
+    return (
+      <>
+        <JoinNow/>
+      </>
+    );
+  }
 }
 
 export default App;
