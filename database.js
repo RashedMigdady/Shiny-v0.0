@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
  //mongoose.connect('mongodb+srv://rashed:r0776381049@shiny-bbeqn.mongodb.net/shiny?retryWrites=true&w=majority');
  mongoose.connect("mongodb://localhost/users" , {useNewUrlParser:true})
-//mongoose.connect('mongodb+srv://naaman:tBZNfUHaMrj8JWAM@cluster0-xcjyv.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.on('error', function () {
@@ -48,7 +47,9 @@ let ProfessionSchema = new mongoose.Schema({
            required:false},
 
   password:{type:String,
-            required:true}
+            required:true},
+  rate:{type:Number,
+        required:false}
 });
 
 let Profession = mongoose.model('Profession', ProfessionSchema);

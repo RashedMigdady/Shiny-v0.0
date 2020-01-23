@@ -1,0 +1,23 @@
+.win{
+    text-align: center;
+    width: 1000px;
+    height: 900px;
+    background-color: lightgreen;
+    margin-left: 220px;
+   
+  }
+
+.h{
+  background-color: lightsalmon;
+  width:auto;
+  height: 200px;
+
+}
+
+.b{
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 70px;
+  height: 50px;
+}
+  

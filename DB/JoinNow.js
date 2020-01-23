@@ -13,13 +13,10 @@ let readData = (cb) => {
     })
 }
 //other solution
-let newProfession = (firstName, lastName, phone, Address, ProfessionType, email, cb) => {
+let newProfession = (HourlyPrice , yearsOfExperience , ProfessionType , cb) => {
     Profession.create({
-        firstName: firstName, lastName: lastName,
-        phone: phone, Address: Address, ProfessionType: ProfessionType,
-        email: email
+        HourlyPrice:HourlyPrice , yearsOfExperience:yearsOfExperience , ProfessionType:ProfessionType
     }, (err, data) => {
-
         if (err) {
             cb(err)
         } else {
@@ -28,8 +25,11 @@ let newProfession = (firstName, lastName, phone, Address, ProfessionType, email,
     })
 }
 
-let JoinProfession = (Pro, cb) => {
-    Profession.create(Pro, (err, data) => {
+let JoinProfession = (firstName, lastName, phone, Address, email, cb) => {
+    Profession.create({
+        firstName: firstName, lastName: lastName,
+        phone: phone, Address: Address,email: email
+    }, (err, data) => {
 
         if (err) {
             cb(err)

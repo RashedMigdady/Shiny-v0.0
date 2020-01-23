@@ -24,9 +24,11 @@ app.get("/workers", (req, res) => {
     });
   });
 
-
 const test = {major:"CS" , gender:"Male"}
-app.get('/', (req, res) => res.json({name:"Rashed",age:23,test}))
+
+
+let x = (req, res) =>{ console.log(req.body);res.json({name:"Omar",age:23,test}); }
+app.get( '/' , x );
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`));
