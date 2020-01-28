@@ -8,6 +8,9 @@ import '../CSS/Home.css';
 
 
 export default class Home extends React.Component{
+    state = {
+        
+    }
 
 
     render(){
@@ -16,7 +19,6 @@ export default class Home extends React.Component{
             <header className="h">
                 <button className="b">Shiny</button>
                 <button type="button" class="btn btn-primary">Primary</button>
-
                 
                 <div className="w3-bar w3-green">
                 <a href="#" className="w3-bar-item w3-button">Home</a>

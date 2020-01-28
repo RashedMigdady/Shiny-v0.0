@@ -10,11 +10,12 @@ class JoinNow extends Component{
         HourlyPrice:'',
         email:'',
         yearsOfExperience:'',
-        Address:'',
+        Address:'Amman',
         ProfessionType:'',
         bio:'',
         reports:[]
     }
+    
     render(){
         return(
             <>

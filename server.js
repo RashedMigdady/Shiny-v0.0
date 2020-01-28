@@ -1,34 +1,34 @@
-const express = require("express");
+// Import Middleware
 const cors = require("cors");
-// const path = require("path");
+const bodyParser = require("body-parser");
+const express = require("express");
+const morgan = require("morgan");
+
+// Call EXPRESS method and store it in 'app' variable.
 const app = express();
+// Import Database connection code.
+const connectToDb = require('./DB/DBConnection');
+
+// connectToDb();
+// Use middleware.
+app.use(cors());
+// Middleware function to use 'req' parameters.
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(morgan());
 
 // app.use(express.static(path.join(__dirname, 'React/build')));
 app.use(express.json());
 app.use(cors());
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname + "/React/build/index.html"));
-// });
+// Import routes.
+const ProffesionRoutes = require("./Routes/ProffesionRoutes");
+const UsersRoutes = require("./Routes/UsersRoutes");
 
-app.use("/CancelJoining", require("./server/CancelJoining"));
-app.use("/JoinNow", require("./server/JoinNow"));
-app.use("/search", require("./server/search"));
-app.use("/report", require("./server/report"));
-
-
-app.get("/workers", (req, res) => {
-    mongo.getWorkers(result => {
-        
-      res.json(result);
-    });
-  });
-
-const test = {major:"CS" , gender:"Male"}
-
-
-let x = (req, res) =>{ console.log(req.body);res.json({name:"Omar",age:23,test}); }
-app.get( '/' , x );
+// Use routes.
+app.use("/profession", ProffesionRoutes);
+app.use("/", UsersRoutes);
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server listening to ${PORT}`));

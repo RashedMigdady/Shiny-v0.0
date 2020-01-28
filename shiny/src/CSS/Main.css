@@ -1,0 +1,49 @@
+.bbb{  
+    
+    background: url("http://tahoehomerepairs.com/images/background/bg04.jpg") no-repeat ;
+    
+    height:752px; 
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+ 
+.logo{
+     width:100px;
+     height:60px;
+     margin-left: 100px;
+     margin-top: 20px;
+
+
+}
+.header{
+    background-color:black;
+    height: 90px;
+    border: blanchedalmond ;
+    
+}
+.active{
+    color: white;
+    font-size: 20px;  
+    border:2px solid white;
+    background-color: black;
+
+    
+    
+    
+}
+
+.btn-group{
+ float: right; 
+ margin-top: -28px; 
+ margin-right: 900px; 
+ margin-left: 30px;
+ width: 400px;
+ position: absolute;
+
+}
+ 
+ 
+ 
