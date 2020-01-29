@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 
 
-class JoinNow extends Component{
+class Register extends Component{
     state={
         firstName:'',
         lastName:'',
@@ -28,4 +28,4 @@ class JoinNow extends Component{
     }
 }
 
-export default JoinNow
+export default Register

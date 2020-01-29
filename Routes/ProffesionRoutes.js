@@ -4,13 +4,13 @@ const router = express.Router();
 const ProffesionController = require('../Controllers/ProffesionController');
 
 // @METHOD POST
-// Return popular movies .
+// for login
 router.post('/login', ProffesionController.login);
 // @METHOD POST
-// Return trending movies .
+// for register .
 router.post('/register', ProffesionController.register);
 // @METHOD POST
-// Return movie details .
+// for remove profession
 router.post('/CancelJoining/:id', ProffesionController.cancel);
 // @METHOD PUT
 // Return movies on search .

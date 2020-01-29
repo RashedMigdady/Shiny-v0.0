@@ -10,5 +10,7 @@ router.post('/search/:query', UserController.search);
 // Send Rate For Profession .
 router.put('/add-rate/:id/:rate', UserController.addRate);
 
+router.get('/show/:id' , UserController.showProfession);
+
 // Exporting Routes.
 module.exports = router;

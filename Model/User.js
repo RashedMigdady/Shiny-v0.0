@@ -109,6 +109,16 @@ let getAllProfessions = cb => {
   });
 };
 
+let showProfession = (id , cb) => {
+  Profession.find({_id : id},(error , data) =>{
+    if (error) {
+      cb(error);
+    } else {
+      cb(data);
+    }
+  });
+};
+
 module.exports = {
   getUser,
   AddUser,
@@ -116,5 +126,6 @@ module.exports = {
   updateInfo,
   addRate,
   search,
-  getAllProfessions
+  getAllProfessions,
+  showProfession
 };

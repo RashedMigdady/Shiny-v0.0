@@ -22,7 +22,12 @@
     background-color:black;
     height: 90px;
     border: blanchedalmond ;
+    display: grid;
     
+}
+.btn-dark{
+    color: black;
+
 }
 .active{
     color: white;
@@ -37,13 +42,40 @@
 
 .btn-group{
  float: right; 
- margin-top: -28px; 
+ margin-top: -55px; 
  margin-right: 900px; 
- margin-left: 30px;
- width: 400px;
- position: absolute;
+ margin-left: 250px;
+margin-bottom: 15px;
+}
+
+.dropdown{
+    
+   width: 350px;
+      
+}
+
+.search{
+margin-left: 500px;
+margin-top: -50px;
+border-radius: 50%;
+}
+
+.butn{
+    border-radius: 20%;
+    background-color: black;
+    border-color: white;
+    color: white;
 
 }
- 
- 
- 
+
+.text-uppercase{
+    color: orangered;
+}
+
+.para{
+    color: orangered;
+}
+
+.links{
+    
+}

@@ -22,7 +22,19 @@ const search = (req, res, next) => {
   });
 };
 
+const showProfession = (req , res ,next) => {
+  const {id} = req.params;
+  mongo.showProfession(id , result => {
+    console.log("result" ,result);
+    res.json(result)
+
+
+
+  })
+}
+
 module.exports = {
   addRate,
-  search
+  search,
+  showProfession
 };
