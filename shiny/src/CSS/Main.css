@@ -2,10 +2,12 @@
     
     background: url("http://tahoehomerepairs.com/images/background/bg04.jpg") no-repeat ;
     
-    height:752px; 
-    width: 100%;
+    height:1200px; 
+    /* width: 100%; */
     background-size: cover;
     background-position: center;
+    max-width: 100%;
+    
 }
 
 
@@ -20,7 +22,7 @@
 }
 .header{
     background-color:black;
-    height: 90px;
+    height: 100px;
     border: blanchedalmond ;
     display: grid;
     
@@ -51,7 +53,15 @@ margin-bottom: 15px;
 .dropdown{
     
    width: 350px;
+   display: inline-block;
       
+}
+.dropdown2{
+    width: 100px;
+    display: inline-block;
+    margin-left: 10px;
+    
+
 }
 
 .search{
@@ -76,6 +86,42 @@ border-radius: 50%;
     color: orangered;
 }
 
-.links{
+.login{
+    width: 80px;
+    margin-left: 1060px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 20%;
+    background-color: black;
+    border-color: white;
+    color: white;
     
+    
+}
+.Register{
+    width: 90px;
+    height: 40px;
+    border-radius: 20%;
+    background-color: black;
+    border-color: white;
+    color: white;
+    margin-left: 1170px;
+    margin-top: -69px;
+}
+
+.btnProfile{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: url("https://cdn4.vectorstock.com/i/1000x1000/76/43/company-manager-icon-flat-style-vector-22367643.jpg");
+    background-size: cover;
+    margin-left: 1300px;
+    margin-top: -69px;
+}
+
+.links{
+   /* display:initial; */
+   color:orangered ; 
+   float: right; 
 }

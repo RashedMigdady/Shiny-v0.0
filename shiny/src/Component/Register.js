@@ -19,7 +19,7 @@ class Register extends Component{
     render(){
         return(
             <>
-            <p>hello world</p>
+            <button className="Register">Join Now</button>
 
 
 

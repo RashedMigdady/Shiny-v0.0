@@ -2,7 +2,11 @@ import React from "react";
 import "../CSS/Main.css";
 import logo from "../images/shiny.jpg";
 import Search from "./Search";
-//import { footer } from 'reactstrap';
+import Login from './Login'
+import Regisret from './Register'
+import Posts from './Posts'
+
+import Profile from './Profile'
 
 export default class Main extends React.Component {
   render() {
@@ -22,7 +26,12 @@ export default class Main extends React.Component {
             <button className="butn">Contact us</button>
             <button className="butn">About us</button>
           </div>
+          <Login/>
+          <Regisret/>
+          <button className="btnProfile"> </button>
         </header>
+        
+        <Posts/>
         {/* ************************************************************************************** */}
 
         <footer
@@ -34,7 +43,8 @@ export default class Main extends React.Component {
             top: "150%",
             width: "100%",
             textAlign: "center",
-            height:"350px"
+            height:"350px",
+            
           }}
         >
           <div className="container-fluid text-center text-md-left">
@@ -97,9 +107,9 @@ export default class Main extends React.Component {
             </div>
           </div>
 
-          <div className="links" >
-            <a href="" style={{color:"orangered" , float:"right" , display:"inline-block"}} >About us </a> 
-            <a href="" style={{color:"orangered" , float:"right"}} >Contact us </a>
+          <div  >
+            <a href="" className="links" >About us </a> 
+            <a href="" className="links" >Contact us </a>
           </div>
         </footer>
 
