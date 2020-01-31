@@ -5,6 +5,7 @@ import Search from "./Search";
 import Login from './Login'
 import Regisret from './Register'
 import Posts from './Posts'
+import Header from "./Header"
 
 import Profile from './Profile'
 
@@ -12,26 +13,9 @@ export default class Main extends React.Component {
   render() {
     return (
       <div className="bbb">
-        <header className="header">
-          <div>
-            <img src={logo} className="logo" />
-          </div>
-
-          <div className="search">
-            <Search />
-          </div>
-
-          <div className="btn-group">
-            <button className="butn">Home</button>
-            <button className="butn">Contact us</button>
-            <button className="butn">About us</button>
-          </div>
-          <Login/>
-          <Regisret/>
-          <button className="btnProfile"> </button>
-        </header>
         
-        <Posts/>
+        
+        <Header/>
         {/* ************************************************************************************** */}
 
         <footer

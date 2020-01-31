@@ -1,22 +1,16 @@
-import React from 'react'
+import React from "react";
 
+export default class Home extends React.Component {
+  state = {
+    email: "",
+    password: ""
+  };
 
-export default class Home extends React.Component{
-    state ={
-        email:"",
-        password:""
-    }
-
-
-    render(){
-        return(
-            <>
-            <button className="login">Login</button>
-
-
-            
-            </>
-        );
-    }
-    
+  render() {
+    return (
+      <>
+        <button className="login">Login</button>
+      </>
+    );
+  }
 }

@@ -2,8 +2,8 @@ import React from "react";
 
 export default class Search extends React.Component {
   state = {
-    professionType: "All",
-    address: ""
+    professionType: "builder",
+    address: "Amman"
   };
 
   render() {
@@ -20,9 +20,7 @@ export default class Search extends React.Component {
               borderWidth: "3px"
             }}
           >
-            <option value="Builder" selected>
-              Builder
-            </option>
+            <option value="Builder" selected>Builder</option>
             <option value="Painter">Painter</option>
             <option value="Cleaner">Cleaner</option>
             <option value="Electrician">Electrician</option>
@@ -36,17 +34,17 @@ export default class Search extends React.Component {
         </div>
 
         <div className="dropdown2">
-          <select className="custom-select" 
-          style={{
+          <select
+            className="custom-select"
+            style={{
               borderRadius: "20%",
               backgroundColor: "black",
               borderColor: "white",
               color: "white",
               borderWidth: "3px"
-            }}>
-            <option value="Amman" selected>
-              Amman
-            </option>
+            }}
+          >
+            <option value="Amman" selected>Amman</option>
             <option value="Irbid">Irbid</option>
             <option value="Aqabah">Aqabah</option>
             <option value="Ajloun">Ajloun</option>
@@ -56,7 +54,6 @@ export default class Search extends React.Component {
             <option value="Madaba">Madaba</option>
             <option value="Maan">Maan</option>
             <option value="Tafeleh">Tafeleh</option>
-
             <option value="Zarqa">Zarqa</option>
             <option value="Karak">Karak</option>
           </select>
