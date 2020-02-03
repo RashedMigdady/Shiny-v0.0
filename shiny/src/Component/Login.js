@@ -15,14 +15,15 @@ export default class Home extends React.Component {
           data-toggle="modal"
           data-target="#exampleModal"
           style={{width: "80px",
-            marginLeft: "1060px",
+            marginLeft: "1130px",
             marginTop: "-50px",
             marginBottom: "30px",
             height: "40px",
             borderRadius: "20%",
             backgroundColor: "black",
             borderColor: "white",
-            color: "white"}}
+            color: "white",
+        borderWidth:"3px"}}
         >
           Login
         </button>

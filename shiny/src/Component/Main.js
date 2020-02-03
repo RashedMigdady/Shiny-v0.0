@@ -9,6 +9,8 @@ import Footer from "./Footer";
 import Search from "./Search";
 import Profile from "./Profile";
 import axios from "axios";
+import person from "../images/builder.jpg";
+
 
 export default class Main extends React.Component {
   state = {
@@ -37,7 +39,7 @@ export default class Main extends React.Component {
   render() {
     return (
       <div className="bbb">
-        <Header />
+        <Header/>
         <div className="dropdown">
           <select
             name="type"
@@ -48,7 +50,9 @@ export default class Main extends React.Component {
               backgroundColor: "black",
               borderColor: "white",
               color: "white",
-              borderWidth: "3px"
+              borderWidth: "3px",
+              marginLeft:"500px",
+              marginTop:"-145px"
             }}
           >
             <option value="builder" selected>
@@ -77,33 +81,52 @@ export default class Main extends React.Component {
               backgroundColor: "black",
               borderColor: "white",
               color: "white",
-              borderWidth: "3px"
+              borderWidth: "3px",
+              marginLeft:"500px",
+              marginTop:"-145px"
+              
             }}
           >
-            <option value="Amman" selected>
+            <option value="amman" selected>
               Amman
             </option>
             <option value="irbid">Irbid</option>
-            <option value="Aqabah">Aqabah</option>
-            <option value="Ajloun">Ajloun</option>
-            <option value="Jarash">Jarash</option>
-            <option value="Balqah">Balqah</option>
-            <option value="Mafraq">Mafraq</option>
-            <option value="Madaba">Madaba</option>
-            <option value="Maan">Maan</option>
-            <option value="Tafeleh">Tafeleh</option>
-            <option value="Zarqa">Zarqa</option>
-            <option value="Karak">Karak</option>
+            <option value="aqabah">Aqabah</option>
+            <option value="ajloun">Ajloun</option>
+            <option value="jarash">Jarash</option>
+            <option value="balqah">Balqah</option>
+            <option value="mafraq">Mafraq</option>
+            <option value="madaba">Madaba</option>
+            <option value="maan">Maan</option>
+            <option value="tafeleh">Tafeleh</option>
+            <option value="zarqa">Zarqa</option>
+            <option value="karak">Karak</option>
           </select>
         </div>
-        <button onClick={() => this.handelSubmit()}>Filter</button>
+        <button
+          style={{
+            width: "80px",
+            marginLeft: "520px",
+            marginTop: "-190px",
+            marginBottom: "50px",
+            height: "40px",
+            borderRadius: "20%",
+            backgroundColor: "black",
+            borderColor: "white",
+            color: "white"
+          }}
+          onClick={() => this.handelSubmit()}
+        >
+          Filter
+        </button>
         {/* ------------------------------------------------------ */}
         <div className="posts">
           {this.state.workers.map(worker => {
             return (
-              <div>
-                <p>{worker.firstName}</p>
-                <p>{worker.Address}</p>
+              <div className="post">
+                <img src={person} className="img" />
+                <p className="name">{worker.firstName}</p>
+                <p className="type">{worker.Address}</p>
               </div>
             );
           })}

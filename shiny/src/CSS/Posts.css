@@ -1,12 +1,18 @@
 .posts{
     display: grid;
-    color: blue;
+    color: none;
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    width: 1000px;
+    /* background-color: white; */
+    width: 1400px;
     height: 900px;
     text-align: center;  
+    margin-left: 35px;
+    border-color: black;
+   border-radius: 40px;
+    border-style: double;
+    border: solid;
+    border-width: 10px;
 }
 
 .grid-item{
