@@ -1,103 +1,115 @@
 import React from "react";
 import "../CSS/Main.css";
 import logo from "../images/shiny.jpg";
+import Login from "./Login";
+import Regisret from "./Register";
+import Posts from "./Posts";
+import Header from "./Header";
+import Footer from "./Footer";
 import Search from "./Search";
-import Login from './Login'
-import Regisret from './Register'
-import Posts from './Posts'
-import Header from "./Header"
-
-import Profile from './Profile'
+import Profile from "./Profile";
+import axios from "axios";
 
 export default class Main extends React.Component {
+  state = {
+    workers: [],
+    city: "",
+    type: ""
+  };
+
+  handelChange = e => {
+    e.preventDefault();
+    let name = e.target.name;
+    let value = e.target.value;
+    this.setState({ [name]: value });
+  };
+
+  handelSubmit = () => {
+    axios
+      .get(
+        `http://localhost:9000/profession/filter/${this.state.city}/${this.state.type}`
+      )
+      .then(res => {
+        this.setState({ workers: res.data.result });
+      });
+  };
+
   render() {
     return (
       <div className="bbb">
-        
-        
-        <Header/>
-        {/* ************************************************************************************** */}
+        <Header />
+        <div className="dropdown">
+          <select
+            name="type"
+            onChange={this.handelChange}
+            className="custom-select"
+            style={{
+              borderRadius: "20%",
+              backgroundColor: "black",
+              borderColor: "white",
+              color: "white",
+              borderWidth: "3px"
+            }}
+          >
+            <option value="builder" selected>
+              Builder
+            </option>
+            <option value="painter">Painter</option>
+            <option value="cleaner">Cleaner</option>
+            <option value="electrician">Electrician</option>
+            <option value="gardener">Gardener</option>
+            <option value="mechanic">Mechanic</option>
+            <option value="tiler">Tiler</option>
+            <option value="barber">Barber</option>
+            <option value="car_Electrician">Car Electrician</option>
+            <option value="carpenter">Carpenter</option>
+            <option value="blacksmith">Blacksmith</option>
+          </select>
+        </div>
 
-        <footer
-          className="page-footer font-large black pt-4"
-          style={{
-            backgroundColor: "black",
-            position: "absolute",
-            left: "0",
-            top: "150%",
-            width: "100%",
-            textAlign: "center",
-            height:"350px",
-            
-          }}
-        >
-          <div className="container-fluid text-center text-md-left">
-            <div className="row">
-              <div className="col-md-6 mt-md-0 mt-3">
-                <h5 className="text-uppercase">Shiny</h5>
-                <p className="para">
-                  Here you can use rows and columns to organize your footer
-                  content.
-                </p>
+        <div className="dropdown2">
+          <select
+            onChange={this.handelChange}
+            name="city"
+            className="custom-select"
+            style={{
+              borderRadius: "20%",
+              backgroundColor: "black",
+              borderColor: "white",
+              color: "white",
+              borderWidth: "3px"
+            }}
+          >
+            <option value="Amman" selected>
+              Amman
+            </option>
+            <option value="irbid">Irbid</option>
+            <option value="Aqabah">Aqabah</option>
+            <option value="Ajloun">Ajloun</option>
+            <option value="Jarash">Jarash</option>
+            <option value="Balqah">Balqah</option>
+            <option value="Mafraq">Mafraq</option>
+            <option value="Madaba">Madaba</option>
+            <option value="Maan">Maan</option>
+            <option value="Tafeleh">Tafeleh</option>
+            <option value="Zarqa">Zarqa</option>
+            <option value="Karak">Karak</option>
+          </select>
+        </div>
+        <button onClick={() => this.handelSubmit()}>Filter</button>
+        {/* ------------------------------------------------------ */}
+        <div className="posts">
+          {this.state.workers.map(worker => {
+            return (
+              <div>
+                <p>{worker.firstName}</p>
+                <p>{worker.Address}</p>
               </div>
+            );
+          })}
+        </div>
 
-              {/* <div className="clearfix w-100 d-md-none pb-3">
-                <div className="col-md-3 mb-md-0 mb-3">
-                  <h5 className="text-uppercase">Links</h5>
-
-                  <ul className="list-unstyled">
-                    <li>
-                      <a href="">Link 1</a>
-                    </li>
-                    <li>
-                      <a href="">Link 2</a>
-                    </li>
-                    <li>
-                      <a href="">Link 3</a>
-                    </li>
-                    <li>
-                      <a href="">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="col-md-3 mb-md-0 mb-3">
-                  <h5 className="text-uppercase">Links</h5>
-
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="">Link 1</a>
-                    </li>
-                    <li>
-                      <a href="">Link 2</a>
-                    </li>
-                    <li>
-                      <a href="">Link 3</a>
-                    </li>
-                    <li>
-                      <a href="">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
-            </div>
-
-            <div className="footer-copyright text-center py-3" style={{color:"white"}}>
-              © 2020 Copyright:
-              <a href="orange.com" style={{color:"orangered"}}>
-                {" "}
-                orange.com
-              </a>
-            </div>
-          </div>
-
-          <div  >
-            <a href="" className="links" >About us </a> 
-            <a href="" className="links" >Contact us </a>
-          </div>
-        </footer>
-
-        {/*******************************************************************************************/}
+        <Footer />
       </div>
     );
   }

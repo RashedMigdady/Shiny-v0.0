@@ -50,7 +50,13 @@ let getAllProfessions = (req, res, next) =>{
       allProffesions: result
     });
   });
+}
 
+let filterProfessions = (req, res, next) =>{
+  console.log(req.params.type)
+  mongo.filterProfessions(req.params.city , req.params.type ).then(result => {
+    res.json({result})
+  });
 }
 
 module.exports = {
@@ -58,5 +64,6 @@ module.exports = {
   register,
   cancel,
   updateInfo,
-  getAllProfessions
+  getAllProfessions,
+  filterProfessions
 };

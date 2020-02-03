@@ -15,9 +15,9 @@ class Header extends React.Component{
             <img src={logo} className="logo" />
           </div>
 
-          <div className="search">
+          {/* <div className="search">
             <Search />
-          </div>
+          </div> */}
 
           <div className="btn-group">
             <button className="butn">Home</button>

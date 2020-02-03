@@ -2,6 +2,7 @@ import React from "react";
 import person from "../images/builder.jpg";
 import "../CSS/Profile.css";
 import Header from "./Header";
+import Footer from './Footer';
 
 export default class Home extends React.Component {
   state = {
@@ -60,7 +61,10 @@ export default class Home extends React.Component {
             </div>
           </div>
           <button className="editProfile">Edit Profile</button>
+
+          <Footer/>
         </div>
+        
       </div>
     );
   }

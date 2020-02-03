@@ -109,14 +109,18 @@ let getAllProfessions = cb => {
   });
 };
 
-let showProfession = (id , cb) => {
-  Profession.find({_id : id},(error , data) =>{
+let showProfession = (id, cb) => {
+  Profession.find({ _id: id }, (error, data) => {
     if (error) {
       cb(error);
     } else {
       cb(data);
     }
   });
+};
+
+let filterProfessions = (city, type) => {
+  return Profession.find({ Address: city, ProfessionType: type });
 };
 
 module.exports = {
@@ -127,5 +131,6 @@ module.exports = {
   addRate,
   search,
   getAllProfessions,
-  showProfession
+  showProfession,
+  filterProfessions
 };

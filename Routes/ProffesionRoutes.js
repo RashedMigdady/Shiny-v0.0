@@ -19,5 +19,7 @@ router.put('/update/:id', ProffesionController.updateInfo);
 // Return movies on search .
 router.put('/get-all', ProffesionController.getAllProfessions);
 
+router.get('/filter/:city/:type' , ProffesionController.filterProfessions);
+
 // Exporting Routes.
 module.exports = router;
