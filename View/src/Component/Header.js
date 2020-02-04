@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../images/shiny.jpg";
-import Search from "./Search";
 import Login from "./Login";
 import Regisret from "./Register";
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import '../CSS/Posts.css'
-//import {hh} from 'bootstrap';
 
 
 export default class Posts extends React.Component{

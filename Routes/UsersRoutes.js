@@ -8,7 +8,6 @@ const UserController = require('../Controllers/UserController');
 router.post('/search/:query', UserController.search);
 // @METHOD PUT
 // Send Rate For Profession .
-router.put('/add-rate/:id/:rate', UserController.addRate);
 
 router.get('/show/:id' , UserController.showProfession);
 

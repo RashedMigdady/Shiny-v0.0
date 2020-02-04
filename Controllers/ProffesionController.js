@@ -59,11 +59,18 @@ let filterProfessions = (req, res, next) =>{
   });
 }
 
+let filterPro = (req , res) =>{
+  mongo.filterPro(req.params.type).then(result => {
+    res.json({result})
+  })
+}
+
 module.exports = {
   login,
   register,
   cancel,
   updateInfo,
   getAllProfessions,
-  filterProfessions
+  filterProfessions,
+  filterPro
 };

@@ -123,6 +123,10 @@ let filterProfessions = (city, type) => {
   return Profession.find({ Address: city, ProfessionType: type });
 };
 
+let filterPro = (type) => {
+  return Profession.find({ProfessionType:type  });
+}
+
 module.exports = {
   getUser,
   AddUser,
@@ -132,5 +136,6 @@ module.exports = {
   search,
   getAllProfessions,
   showProfession,
-  filterProfessions
+  filterProfessions,
+  filterPro
 };

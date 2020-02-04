@@ -21,6 +21,8 @@ router.put('/get-all', ProffesionController.getAllProfessions);
 
 router.get('/filter/:city/:type' , ProffesionController.filterProfessions);
 
+router.get("/pro/:type" , ProffesionController.filterPro);
+
 
 
 // Exporting Routes.

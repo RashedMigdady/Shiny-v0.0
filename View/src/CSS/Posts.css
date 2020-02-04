@@ -1,14 +1,14 @@
 .posts{
     display: grid;
     color: none;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /* background-color: white; */
+   
+    grid-template-columns: auto auto auto ;
+    
     width: 1400px;
     height: 900px;
     text-align: center;  
     margin-left: 35px;
-    border-color: black;
+    border-color:black;
    border-radius: 40px;
     border-style: double;
     border: solid;

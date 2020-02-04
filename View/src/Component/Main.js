@@ -1,15 +1,10 @@
 import React from "react";
 import "../CSS/Main.css";
 import logo from "../images/shiny.jpg";
-import Login from "./Login";
 import Regisret from "./Register";
-import Posts from "./Posts";
-import Header from "./Header";
 import Footer from "./Footer";
-import Search from "./Search";
-import Profile from "./Profile";
 import axios from "axios";
-import person from "../images/builder.jpg";
+import person from "../images/bb.jpg";
 
 export default class Main extends React.Component {
   state = {
@@ -26,6 +21,7 @@ export default class Main extends React.Component {
   };
 
   handelSubmit = () => {
+    
     axios
       .get(
         `http://localhost:9000/profession/filter/${this.state.city}/${this.state.type}`
@@ -34,6 +30,9 @@ export default class Main extends React.Component {
         this.setState({ workers: res.data.result });
       });
   };
+
+  
+
 
   render() {
     return (
@@ -301,6 +300,7 @@ export default class Main extends React.Component {
                 <p className="exp">
                   {worker.yearsOfExperience} years of experience
                 </p>
+                <p>{worker.age} years</p>
               </div>
             );
           })}
