@@ -1,157 +1,147 @@
-.bbb{  
-    
-    background: url("http://tahoehomerepairs.com/images/background/bg04.jpg") no-repeat ;
-    
-    height:1200px; 
-    /* width: 100%; */
-    background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    
+.bbb {
+  background: url("http://tahoehomerepairs.com/images/background/bg04.jpg")
+    no-repeat;
+
+  height: 1200px;
+  /* width: 100%; */
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
 }
 
-
- 
-.logo{
-     width:150px;
-     height:100px;
-     margin-left: 70px;
-     margin-top: 20px;
-
-
+.logo {
+  width: 150px;
+  height: 100px;
+  margin-left: 70px;
+  margin-top: 20px;
 }
-.header{
-    background-color:black;
-    height: 150px;
-    border-color: rgb(6, 27, 146);
-    display: grid;
-    border-width: 8px;
-    border-style: double;  
+.header {
+  background-color: black;
+  height: 150px;
+  border-color: rgb(6, 27, 146);
+  display: grid;
+  border-width: 8px;
+  border-style: double;
 }
-.btn-dark{
-    color: black;
-
+.btn-dark {
+  color: black;
 }
-.active{
-    color: white;
-    font-size: 20px;  
-    border:2px solid white;
-    background-color: black;
-
-    
-    
-    
+.active {
+  color: white;
+  font-size: 20px;
+  border: 2px solid white;
+  background-color: black;
 }
 
-.btn-group{
- float: right; 
- margin-top: -55px; 
- margin-right: 900px; 
- margin-left: 250px;
-margin-bottom: 15px;
+.btn-group {
+  float: right;
+  margin-top: -55px;
+  margin-right: 900px;
+  margin-left: 250px;
+  margin-bottom: 15px;
 }
 
-.dropdown{
-    
-   width: 350px;
-   display: inline-block;
-      
+.dropdown {
+  width: 350px;
+  display: inline-block;
 }
-.dropdown2{
-    width: 100px;
-    display: inline-block;
-    margin-left: 10px;
-    
-
+.dropdown2 {
+  width: 100px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
-.search{
-margin-left: 500px;
-margin-top: -50px;
-border-radius: 50%;
+.search {
+  margin-left: 500px;
+  margin-top: -50px;
+  border-radius: 50%;
 }
 
-.butn{
-    border-radius: 20%;
-    background-color: black;
-    border-color: white;
-    color: white;
-
+.butn {
+  border-radius: 20%;
+  background-color: black;
+  border-color: white;
+  color: white;
 }
 
-.text-uppercase{
-    color: orangered;
+.text-uppercase {
+  color: orangered;
 }
 
-.para{
-    color: orangered;
+.para {
+  color: orangered;
 }
 
-.login{
-    width: 80px;
-    margin-left: 1130px;
-    margin-top: -50px;
-    margin-bottom: 30px;
-    height: 40px;
-    border-radius: 20%;
-    background-color: black;
-    border-color: white;
-    color: white;
-    
-    
+.login {
+  width: 80px;
+  margin-left: 1130px;
+  margin-top: -55px;
+  margin-bottom: 30px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: black;
+  border-color: white;
+  color: white;
 }
-.Register{
-    width: 90px;
-    height: 40px;
-    border-radius: 20%;
-    background-color: black;
-    border-color: white;
-    color: white;
-    margin-left: 1220px;
-    margin-top: -69px;
+.Register {
+  width: 90px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: black;
+  border-color: white;
+  color: white;
+  margin-left: 1220px;
+  margin-top: -89px;
 }
 
-.btnProfile{
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background: url("https://cdn4.vectorstock.com/i/1000x1000/76/43/company-manager-icon-flat-style-vector-22367643.jpg");
-    background-size: cover;
-    margin-left: 1390px;
-    margin-top: -69px;
+.btnProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: url("https://cdn4.vectorstock.com/i/1000x1000/76/43/company-manager-icon-flat-style-vector-22367643.jpg");
+  background-size: cover;
+  margin-left: 1390px;
+  margin-top: -90px;
 }
 
-.links{
-   /* display:initial; */
-   color:orangered ; 
-   float: right; 
+.links {
+  /* display:initial; */
+  color: orangered;
+  float: right;
 }
-.post{
-    background-color: black;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 78px;
-    border-width: 4px;
-    border-color: black;
+.post {
+  background-color: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 78px;
 
+  color: white;
+  font-size: 20px;
+  display: inline-table;
+  border-width: 3px;
+  border-color: black;
+  border: solid;
 }
-.img{
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    margin-top: 20px;
-    border-color: black;
-    border: solid;
-    border-width: 4px;
+.img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin-top: 20px;
+  border-color: black;
+  border: solid;
+  border-width: 4px;
 }
 
-.name{
-    
-    
+.n {
+  font-size: 25px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-
-
-
+.exp {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}

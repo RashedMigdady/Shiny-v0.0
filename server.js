@@ -7,7 +7,7 @@ const morgan = require("morgan");
 // Call EXPRESS method and store it in 'app' variable.
 const app = express();
 // Import Database connection code.
-const connectToDb = require('./DB/DBConnection');
+const connectToDb = require("./DB/DBConnection");
 
 // connectToDb();
 // Use middleware.

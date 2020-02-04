@@ -57,6 +57,7 @@ export default class Search extends React.Component {
             <option value="Zarqa">Zarqa</option>
             <option value="Karak">Karak</option>
           </select>
+          
         </div>
       </React.Fragment>
     );

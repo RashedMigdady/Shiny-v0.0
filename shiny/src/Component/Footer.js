@@ -19,8 +19,13 @@ export default class Home extends React.Component {
           <div className="container-fluid text-center text-md-left">
             <div className="row">
               <div className="col-md-6 mt-md-0 mt-3">
-                <h5 className="text-uppercase">Shiny</h5>
-                <p className="para" style={{width:"500px"}}>
+                <h5
+                  className="text-uppercase"
+                  style={{ color: "blue", fontFamily: "Times, serif" }}
+                >
+                  Shiny
+                </h5>
+                <p className="para" style={{ width: "500px", color: "blue" }}>
                   Shiny is the leading platform for connecting individuals
                   looking for household services with top-quality, pre-screened
                   independent service professionals. From home cleaning to
@@ -32,26 +37,24 @@ export default class Home extends React.Component {
                   home services.
                 </p>
               </div>
-
-              
             </div>
 
             <div
               className="footer-copyright text-center py-3"
               style={{ color: "white" }}
             >
-              © 2020 Copyright:{  }
+              © 2020 Copyright:{}
               <a href="orange.com" style={{ color: "orangered" }}>
-                
-                orange.com
+                Orange
               </a>
             </div>
           </div>
 
-          <div style={{marginTop:"-100px" , marginRight:"30px"}}>
+          <div style={{ marginTop: "-100px", marginRight: "30px" }}>
             <a href="" className="links">
               About us
-            </a><br></br>
+            </a>
+            <br></br>
             <a href="" className="links">
               Contact us
             </a>
