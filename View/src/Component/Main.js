@@ -283,10 +283,10 @@ export default class Main extends React.Component {
             <option value="tafeleh">Tafeleh</option>
             <option value="zarqa">Zarqa</option>
             <option value="karak">Karak</option>
-          </select>
+          </select> 
         </div>
 
-        {/* ------------------------------------------------------ */}
+       {/* ------------------------------------------------------ */}
         <div className="posts">
           {this.state.workers.map(worker => {
             return (

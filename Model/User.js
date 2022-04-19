@@ -26,7 +26,7 @@ let ProfessionSchema = new mongoose.Schema({
 
   rate: { type: Array, required: false, min: 0, max: 5 },
 
-  views: { type: Number, required: false, min: 0 }
+  views: { type: Number, required: false, min: 0 },
 });
 
 let Profession = mongoose.model("Profession", ProfessionSchema);
@@ -99,7 +99,7 @@ let addRate = (id, rate, cb) => {
   );
 };
 
-let getAllProfessions = cb => {
+let getAllProfessions = (cb) => {
   Profession.find({}, (error, data) => {
     if (error) {
       cb(error);
@@ -124,8 +124,8 @@ let filterProfessions = (city, type) => {
 };
 
 let filterPro = (type) => {
-  return Profession.find({ProfessionType:type  });
-}
+  return Profession.find({ ProfessionType: type });
+};
 
 module.exports = {
   getUser,
@@ -137,5 +137,5 @@ module.exports = {
   getAllProfessions,
   showProfession,
   filterProfessions,
-  filterPro
+  filterPro,
 };
